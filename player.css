@@ -1,0 +1,93 @@
+:root{
+ 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#player {
+  width: 90%;
+  display: grid;
+  place-content: center;
+  font-family: sans-serif;
+}
+
+
+#controls {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#play{
+  border: thin solid black;
+  height: 4vh;
+  width: 4vh;
+  border-radius: 200px; 
+  padding: 1vh; 
+}
+
+#play div{
+  height: 100%;
+  background: black;
+  clip-path: polygon(100% 50%, 15% 0, 15% 100%);
+/*   clip-path: polygon(0% 0%, 0% 100%, 33% 100%, 33% 0, 66% 0, 65% 100%, 100% 100%, 100% 0%); */
+}
+
+#seek {
+  width: 100%;
+}
+
+#seek-values{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+#seek-values p{
+  margin: 0;
+}
+
+#rewind-container, #fast-forward-container {
+  display: flex;
+  align-items: top;
+}
+
+#rewind-container, #fast-forward-container, #seek, #play {
+  cursor: pointer;
+}
+
+#rewind-container :first-child{
+ background: black;
+ clip-path: polygon(60% 0, 100% 40%, 100% 0); 
+}
+
+#fast-forward-container :last-child {
+  background: black;
+  clip-path: polygon(0 0, 0 40%, 40% 0);
+}
+
+#rewind, #fast-forward {
+  border: solid thin;
+  border-top-style: dashed;
+  height: 2vh;
+  width: 2vh;
+  font-size: 0.7em;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#rewind{
+  border-left: 0;
+  margin-right: 1.5vh;
+}
+
+#fast-forward{
+  border-right: 0;
+  margin-left: 1.5vh;
+}
+
